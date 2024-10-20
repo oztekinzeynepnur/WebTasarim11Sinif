@@ -1,0 +1,157 @@
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(7,100px);
+    grid-template-rows:  repeat(6,100px);
+    place-content: center;
+    gap: 15px;
+}
+div{
+    background-color: rgb(0, 255, 34);
+    border: thin solid rgb(12, 61, 0);
+}
+.kutu1{
+    grid-column: 2/3;
+}
+.kutu2{
+    grid-column: 6/7;
+    grid-row: 1/2;
+}
+.kutu3{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.kutu4{
+    background-color: rgb(0, 0, 0);
+    border: thin solid rgb(0, 0, 0);
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.kutu5{
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+.kutu6{
+    grid-column: 5/6;
+    grid-row: 2/3;
+}
+.kutu7{
+    background-color: rgb(0, 0, 0);
+    border: thin solid rgb(0, 0, 0);
+    grid-column: 6/7;
+    grid-row: 2/3;
+}
+.kutu8{
+    grid-column: 7/8;
+    grid-row: 2/3;
+}
+.kutu9{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+.kutu10{
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+.kutu11{
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+.kutu12{
+    grid-column: 4/5;
+    grid-row: 3/4;
+}
+.kutu13{
+    grid-column: 5/6;
+    grid-row: 3/4;
+}
+.kutu14{
+    grid-column: 6/7;
+    grid-row: 3/4;
+}
+.kutu15{
+    grid-column: 7/8;
+    grid-row: 3/4;
+}
+.kutu16{
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+.kutu17{
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+.kutu18{
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+.kutu19{
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
+.kutu20{
+    grid-column: 5/6;
+    grid-row: 4/5;
+}
+.kutu21{
+    grid-column: 6/7;
+    grid-row: 4/5;
+}
+.kutu22{
+    grid-column: 7/8;
+    grid-row: 4/5;
+}
+.kutu23{
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+.kutu24{
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+.kutu25{
+    background-color: rgb(0, 0, 0);
+    border: thin solid rgb(0, 0, 0);
+    grid-column: 3/4;
+    grid-row: 5/6;
+}
+.kutu26{
+    background-color: rgb(0, 0, 0);
+    border: thin solid rgb(0, 0, 0);
+    grid-column: 4/5;
+    grid-row: 5/6;
+}
+.kutu27{
+    background-color: rgb(0, 0, 0);
+    border: thin solid rgb(0, 0, 0);
+    grid-column: 5/6;
+    grid-row: 5/6;
+}
+.kutu28{
+    grid-column: 6/7;
+    grid-row: 5/6;
+}
+.kutu29{
+    grid-column: 7/8;
+    grid-row: 5/6;
+}
+.kutu30{
+    grid-column: 2/3;
+    grid-row: 6/7;
+}
+.kutu31{
+    grid-column: 3/4;
+    grid-row: 6/7;
+}
+.kutu32{
+    grid-column: 4/5;
+    grid-row: 6/7;
+}
+.kutu33{
+    grid-column: 5/6;
+    grid-row: 6/7;
+}
+.kutu34{
+    grid-column: 6/7;
+    grid-row: 6/7;
+}
