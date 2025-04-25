@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Güzellik Merkezi Randevu Sistemi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tema Değiştirme Butonu -->
+    <div class="theme-switch-wrapper position-fixed top-0 end-0 mt-3 me-3">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <em class="ms-2"><i class="fas fa-moon"></i></em>
+    </div>
+
+    <!-- Ana Container -->
+    <div class="container py-5">
+        <!-- Header -->
+        <header class="text-center mb-5">
+            <h1 class="display-4 mb-3">💅 Güzellik Merkezi</h1>
+            <p class="lead">Profesyonel hizmet, mutlu müşteriler</p>
+        </header>
+
+        <!-- Ana İçerik -->
+        <div class="row">
+            <!-- Randevu Formu -->
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">Randevu Al</h3>
+                        <form id="appointmentForm">
+                            <div class="mb-3">
+                                <label class="form-label">Cinsiyet</label>
+                                <select class="form-select" id="gender" required>
+                                    <option value="">Seçiniz</option>
+                                    <option value="kadin">Kadın</option>
+                                    <option value="erkek">Erkek</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Ad Soyad</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">E-posta</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Hizmet</label>
+                                <select class="form-select" id="service" required>
+                                    <option value="">Önce cinsiyet seçiniz</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Tarih</label>
+                                <input type="date" class="form-control" id="date" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Saat</label>
+                                <select class="form-select" id="time" required>
+                                    <option value="">Seçiniz</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Randevu Al</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Randevu Listesi -->
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h3 class="card-title mb-0">Randevularım</h3>
+                            <div class="search-box">
+                                <input type="text" class="form-control" id="searchInput" placeholder="Ara...">
+                            </div>
+                        </div>
+                        <div id="appointmentsList" class="list-group">
+                            <!-- Randevular buraya dinamik olarak eklenecek -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hizmetler Bölümü -->
+        <div class="row mt-5">
+            <h2 class="text-center mb-4">Hizmetlerimiz</h2>
+            <!-- Kadın Hizmetleri -->
+            <div class="col-md-6 mb-4">
+                <div class="card service-card">
+                    <div class="card-body">
+                        <h4 class="card-title"><i class="fas fa-female"></i> Kadın Hizmetleri</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">💇‍♀️ Saç Kesimi ve Şekillendirme</li>
+                            <li class="list-group-item">✨ Cilt Bakımı</li>
+                            <li class="list-group-item">💅 Manikür & Pedikür</li>
+                            <li class="list-group-item">👁️ Kaş & Kirpik</li>
+                            <li class="list-group-item">💄 Makyaj</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Erkek Hizmetleri -->
+            <div class="col-md-6 mb-4">
+                <div class="card service-card">
+                    <div class="card-body">
+                        <h4 class="card-title"><i class="fas fa-male"></i> Erkek Hizmetleri</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">✂️ Saç Kesimi</li>
+                            <li class="list-group-item">🧔 Sakal Tıraşı</li>
+                            <li class="list-group-item">🧖‍♂️ Yüz Bakımı</li>
+                            <li class="list-group-item">💆‍♂️ Masaj</li>
+                            <li class="list-group-item">👨 Kaş & Burun Bakımı</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bildirim Modal -->
+    <div class="modal fade" id="notificationModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Bildirim</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalMessage"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
