@@ -63,7 +63,8 @@ Tüm randevu verileri tarayıcınızın LocalStorage'ında saklanır. Herhangi b
 
 ## 📱 Ekran Görüntüleri
 
-[Ekran görüntülerini buraya ekleyin]
+![image](https://github.com/user-attachments/assets/890670e6-6d3a-42f5-8414-69063ea4b615)
+
 
 ## 🤝 Katkıda Bulunma
 
