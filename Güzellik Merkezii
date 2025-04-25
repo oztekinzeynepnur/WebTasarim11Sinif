@@ -1,0 +1,39 @@
+Bu site modern ve kullanıcı dostu bir Güzellik Merkezi Randevu Sistemidir. İşte sitenin ana özellikleri:
+
+Temel Özellikler:
+Kolay kullanılabilir randevu oluşturma sistemi
+Karanlık/Aydınlık tema desteği
+Responsive (mobil uyumlu) tasarım
+Bootstrap 5 ile modern arayüz
+Randevu Sistemi:
+Cinsiyet seçimi (Kadın/Erkek)
+Kişisel bilgi girişi (Ad Soyad, E-posta)
+Cinsiyete özel hizmet seçenekleri
+Tarih ve saat seçimi
+Randevu listeleme ve yönetimi
+Hizmetler: Kadınlar için:
+Saç Kesimi ve Şekillendirme
+Cilt Bakımı
+Manikür & Pedikür
+Kaş & Kirpik
+Makyaj
+Erkekler için:
+
+Saç Kesimi
+Sakal Tıraşı
+Yüz Bakımı
+Masaj
+Kaş & Burun Bakımı
+Teknik Özellikler:
+LocalStorage ile veri saklama
+Arama ve filtreleme özelliği
+Randevu silme fonksiyonu
+Bildirim sistemi
+E-posta doğrulama simülasyonu
+Kullanılan Teknolojiler:
+HTML5
+CSS3
+JavaScript (Vanilla)
+Bootstrap 5
+Font Awesome ikonları
+
