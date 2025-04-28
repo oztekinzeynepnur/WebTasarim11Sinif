@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siber Portfolyo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'glitch': 'glitch 1s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'cyber-pulse': 'cyber-pulse 2s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        glitch: {
+                            '0%, 100%': { transform: 'translate(0)' },
+                            '33%': { transform: 'translate(-5px, 2px)' },
+                            '66%': { transform: 'translate(5px, -2px)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        'cyber-pulse': {
+                            '0%, 100%': { 
+                                textShadow: '0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff'
+                            },
+                            '50%': { 
+                                textShadow: '0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .cyber-bg {
+            background: linear-gradient(45deg, #000000, #1a0f1f, #000000);
+            position: relative;
+            overflow: hidden;
+        }
+        .cyber-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent 0,
+                transparent 40px,
+                rgba(255, 0, 255, 0.1) 40px,
+                rgba(255, 0, 255, 0.1) 41px
+            );
+            animation: scan 8s linear infinite;
+        }
+        @keyframes scan {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+        .cyber-border {
+            position: relative;
+        }
+        .cyber-border::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            z-index: -1;
+            animation: border-flow 4s linear infinite;
+        }
+        @keyframes border-flow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        .hologram {
+            position: relative;
+            overflow: hidden;
+        }
+        .hologram::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                135deg,
+                transparent 0%,
+                rgba(255, 0, 255, 0.2) 50%,
+                transparent 100%
+            );
+            animation: hologram-shine 3s linear infinite;
+        }
+        @keyframes hologram-shine {
+            0% { transform: translateX(-100%) translateY(-100%); }
+            100% { transform: translateX(100%) translateY(100%); }
+        }
+    </style>
+</head>
+<body class="cyber-bg text-white min-h-screen">
+    <!-- Header -->
+    <header class="container mx-auto px-4 py-8">
+        <nav class="flex justify-between items-center">
+            <div class="text-2xl font-bold animate-cyber-pulse">[CYBER.DEV]</div>
+            <div class="space-x-6">
+                <a href="#about" class="hover:text-cyan-400 transition-colors">HAKKINDA</a>
+                <a href="#projects" class="hover:text-pink-400 transition-colors">PROJELER</a>
+                <a href="#contact" class="hover:text-purple-400 transition-colors">İLETİŞİM</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative">
+        <div class="text-center z-10">
+            <h1 class="text-6xl font-bold mb-6 animate-glitch">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-cyan-500">
+                    GELECEK BURADA BAŞLIYOR
+                </span>
+            </h1>
+            <p class="text-xl text-gray-400 mb-8 animate-float">Yaratıcı Geliştirici & Dijital Sanatçı</p>
+            <button class="cyber-border bg-black px-8 py-3 rounded-lg hover:scale-105 transition-transform">
+                KEŞFET
+            </button>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 animate-cyber-pulse">PROJELER</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="cyber-border rounded-lg p-6 bg-black/50 backdrop-blur-lg hologram group hover:scale-105 transition-transform">
+                    <div class="mb-4">
+                        <img src="https://picsum.photos/400/300" alt="Proje 1" class="rounded-lg w-full">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">Siber Güvenlik Platformu</h3>
+                    <p class="text-gray-400">Gelişmiş güvenlik çözümleri ve yapay zeka entegrasyonu</p>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="cyber-border rounded-lg p-6 bg-black/50 backdrop-blur-lg hologram group hover:scale-105 transition-transform">
+                    <div class="mb-4">
+                        <img src="https://picsum.photos/401/300" alt="Proje 2" class="rounded-lg w-full">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-pink-400 transition-colors">VR Deneyimi</h3>
+                    <p class="text-gray-400">Sanal gerçeklik ile interaktif kullanıcı deneyimi</p>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="cyber-border rounded-lg p-6 bg-black/50 backdrop-blur-lg hologram group hover:scale-105 transition-transform">
+                    <div class="mb-4">
+                        <img src="https://picsum.photos/402/300" alt="Proje 3" class="rounded-lg w-full">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">AI Asistan</h3>
+                    <p class="text-gray-400">Yapay zeka destekli kişisel asistan uygulaması</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black/30">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 animate-cyber-pulse">İLETİŞİM</h2>
+            <div class="max-w-md mx-auto">
+                <form class="space-y-6">
+                    <div>
+                        <input type="text" placeholder="İSİM" class="w-full bg-black/50 border border-pink-500 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="E-POSTA" class="w-full bg-black/50 border border-pink-500 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors">
+                    </div>
+                    <div>
+                        <textarea placeholder="MESAJ" rows="4" class="w-full bg-black/50 border border-pink-500 rounded-lg px-4 py-3 focus:outline-none focus:border-cyan-500 transition-colors"></textarea>
+                    </div>
+                    <button type="submit" class="w-full cyber-border bg-black px-8 py-3 rounded-lg hover:scale-105 transition-transform">
+                        GÖNDER
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Scroll Animation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // GSAP Animations
+        gsap.from(".cyber-border", {
+            duration: 1,
+            opacity: 0,
+            y: 50,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: ".cyber-border",
+                start: "top bottom",
+                end: "bottom top",
+                toggleActions: "play none none reverse"
+            }
+        });
+
+        // Hover Effects
+        document.querySelectorAll('.cyber-border').forEach(element => {
+            element.addEventListener('mousemove', (e) => {
+                const rect = element.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                element.style.setProperty('--mouse-x', `${x}px`);
+                element.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+</html>
